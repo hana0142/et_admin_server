@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>JavaScript example</title>
+		<meta charSet="UTF-8"/>
+		<%- include('partial/header3') %>
+		<%- include('partial/header4') %>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<style media="only screen">
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                box-sizing: border-box;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            html {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0;
+                overflow: auto;
+            }
+
+            body {
+                padding: 1rem;
+                overflow: auto;
+            }
+        </style>
+	</head>
+	<body>
+		<div id="myGrid" class="ag-theme-alpine" style="height: 100%;">
+		</div>
+		<script>var __basePath = './';</script>
+		<script src="https://unpkg.com/@ag-grid-enterprise/all-modules@26.1.0/dist/ag-grid-enterprise.min.js">
+		</script>
+	<script>
+		var gridOptions = {
+  columnDefs: [
+    // group cell renderer needed for expand / collapse icons
+    { field: 'name', cellRenderer: 'agGroupCellRenderer' },
+    { field: 'account' },
+    { field: 'calls' },
+    { field: 'minutes', valueFormatter: "x.toLocaleString() + 'm'" },
+  ],
+  defaultColDef: {
+    flex: 1,
+  },
+  masterDetail: true,
+  detailCellRendererParams: {
+    detailGridOptions: {
+      rowSelection: 'multiple',
+      suppressRowClickSelection: true,
+      enableRangeSelection: true,
+      pagination: true,
+      paginationAutoPageSize: true,
+      columnDefs: [
+        { field: 'callId', checkboxSelection: true },
+        { field: 'direction' },
+        { field: 'number', minWidth: 150 },
+        { field: 'duration', valueFormatter: "x.toLocaleString() + 's'" },
+        { field: 'switchCode', minWidth: 150 },
+      ],
+      defaultColDef: {
+        sortable: true,
+        flex: 1,
+      },
+    },
+    getDetailRowData: function (params) {
+      params.successCallback(params.data.callRecords);
+    },
+  },
+  onFirstDataRendered: onFirstDataRendered,
+};
+
+function onFirstDataRendered(params) {
+  // arbitrarily expand a row for presentational purposes
+  setTimeout(function () {
+    params.api.getDisplayedRowAtIndex(1).setExpanded(true);
+  }, 0);
+}
+
+// setup the grid after the page has finished loading
+document.addEventListener('DOMContentLoaded', function () {
+  var gridDiv = document.querySelector('#myGrid');
+  new agGrid.Grid(gridDiv, gridOptions);
+
+  agGrid
+    .simpleHttpRequest({
+      url: 'https://www.ag-grid.com/example-assets/master-detail-data.json',
+    })
+    .then(function (data) {
+      gridOptions.api.setRowData(data);
+    });
+});
+
+	</script>
+		<%- include('partial/footer2') %>
+	</body>
+</html>

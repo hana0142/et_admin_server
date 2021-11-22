@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('partial/header') %>
+<%- include ('partial/log_header') %>
+
+<link rel="stylesheet" href="css/login_css.css" />
+
+<!--body-->
+<body class="main-layout">
+<!--loader-->
+
+            <div class="main-form">
+                <h1>Login</h1>
+                <form action="/login" method="POST">
+			<label for="userid">Username: </label>
+                    <input type="text" id="username" name="username" autofocus>
+                    <br />
+
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" name="password">
+                    <br /><br />
+                    
+                    <input class="submitButton" type="submit" value="LOGIN">
+                </form>
+                <p>Or <a href="/register">register</a> if you do not have an account.</p>
+            </div>
+
+
+</body>
+</html>

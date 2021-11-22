@@ -1,0 +1,58 @@
+ <div class="header">
+        <div class="top_header">
+            <div class="container-width">
+                <div class="row d_flex">
+                    <div class=" col-md-3 col-sm-4">
+                        <div class="logo">
+                                <figure><img src="images/banner3.png" a href="index.html"></figure>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="header_midil">
+            <div class="container-width">
+                <div class="row d_flex">
+                    <div class="col-lg-9 col-md-12 col-sm-12">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                            <div class="collapse navbar-collapse" id="navbarsExample04">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/profile">Profile</a>
+                                    </li>
+                                    <li class="nav-item">
+                                            <a class="nav-link" href="/eyetracking">ET</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/result">Result</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="col-md-3  d_none">
+                        <ul class="email text_align_right">
+			<% if(user) {%>
+				<li><a href="/logout"><i class="fa fa-user" aria-hidden="true"></i>Log Out</a></li>
+			<% } else { %>
+                            <li><a href="/login"><i class="fa fa-user" aria-hidden="true"></i>Log In</a></li>
+                            <li><a href="/register"><i class="fa fa-user" aria-hidden="true"></i>Sign Up</a></li>
+                            <li><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+			<% } %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

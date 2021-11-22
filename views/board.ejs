@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<%- include('partial/header'); %>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <%- include('partial/loader'); %>
+    <!-- end loader -->
+    <!-- header -->
+    <%- include('partial/header2'); %>
+    <!-- top -->
+
+    <section id="main-content">
+          <section class="wrapper site-min-height">
+                <h3><i class="fa fa-angle-right"></i> Blank Page</h3>
+                <div class="row mt">
+<div class="col-md-12">
+                                  <div class="content-panel">
+                                          <h4><i class="fa fa-angle-right"></i> User List</h4>
+                                          <hr>
+                                      <table class="table" id="resultdata" >
+                                          <thead>
+                                          <tr>
+                                              <th>#</th>
+                                              <th>User ID</th>
+                                             <th>Operation No.</th>
+                                              <th>Operation Date</th>
+                                          </tr>
+                                          </thead>
+                                          <tbody>
+                                        <% for (i=0; i<rows.length; i++){ %>
+                                        <tr>
+                                                <td><%=rows[i].userid %></td>
+                                              <td><%=rows[i].operno %></td>
+                                              <td><%=rows[i].operdate %></td>
+                                          </tr>
+
+                                        <% } %>
+                                          </tbody>
+                                      </table>
+                                  </div><! --/content-panel -->
+                          </div>
+                </div>
+
+                </section><! --/wrapper -->
+      </section>
+
+    <section id="main-content">
+          <section class="wrapper site-min-height">
+                <h3><i class="fa fa-angle-right"></i> Blank Page</h3>
+                <div class="row mt">
+<div class="col-md-12">
+                                  <div class="content-panel">
+                                          <h4><i class="fa fa-angle-right"></i> User List</h4>
+                                          <hr>
+                                      <table class="table" id="resultdata" >
+                                          <thead>
+                                          <tr>
+                                              <th>#</th>
+					      <th>User Name</th>
+                                             <th>Left Eye</th>
+                                              <th>Right Eye</th>
+                                              <th>Departure Time</th>
+                                              <th>Arrival Time</th>
+                                          </tr>
+                                          </thead>
+                                          <tbody>
+			                <% for (i=0; i<rows1.length; i++){ %>
+                                        <tr>
+						<td><%=rows1[i].operno %></td>
+                                              <td><%=rows1[i].username %></td>
+                                              <td><%=rows1[i].left_eye %></td>
+                                              <td><%=rows1[i].right_eye %></td>
+                                              <td><%=rows1[i].dep_time %></td>
+                                              <td><%=rows1[i].arr_time %></td>
+
+                                          </tr>
+                
+                                        <% } %>
+                                          </tbody>
+                                      </table>
+                                  </div><! --/content-panel -->
+                          </div>
+                </div>
+
+                </section><! --/wrapper -->
+      </section>
+    <!-- end work -->
+    <!--  footer -->
+    <%-  include('partial/footer'); %>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="jquery.simplePagination.js"></script>
+<script>
+                $(function() {
+                        $("#resultdata").simplePagination({
+                                previousButtonClass: "btn btn-danger",
+                                nextButtonClass: "btn btn-danger"
+                        });
+
+
+                });
+        </script>
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>
+

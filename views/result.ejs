@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <%- include('partial/header3') %>
+</head>
+<body>
+        <%- include('partial/header4') %>
+<!--slide 3 -->
+<div class="slides">
+<div class="slide" id="2">
+  <div class="content second-content">
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="first-section">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="left-content">
+                    <h2>Operation List</h2>
+                    <p> </p>
+                    <table class="table" id="tboper" style="font-size:12px">
+                      <thead>
+                        <tr style="color:white">
+                          <th>#</th>
+                          <th>User ID</th>
+                          <th>Operation No.</th>
+                          <th>Operation Date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+
+                        <% for (i=0; i<rows.length; i++){ %>
+                        <tr id="row1">
+                          <td style="color:white">
+                            <%=rows[i].index %>
+                          <td style="color:white">
+                            <%=rows[i].userid %>
+                          </td>
+                          <td class="oper" id="oper" style="color:white">
+                            <%=rows[i].operno %>
+                          </td>
+                          <td style="color:white">
+                            <%=rows[i].operdate %>
+                          </td>
+                                              
+                          
+                        </tr>
+
+                        <% } %>
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="second-section">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="left-content">
+                    <h2>Detail result</h2>
+                    <p>Result</p>
+                    <table class="table" id="tb_user_oper" style="color:white">  
+                      <thead>
+                        <tr>
+                          <th>Operation NO.</th>
+                          <th>User Name</th>
+                          <th>Left Eye</th>
+                          <th>Right Eye</th>
+                          <th>Departure Time</th>
+                          <th>Arrival Time</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% for (i=0; i<rows1.length; i++){ %>
+                        <tr id="row2">
+                          <td id="useroper">
+                            <%=rows1[i].operno %>
+                          </td>
+                          <td>
+                            <%=rows1[i].username %>
+                          </td>
+                          <td>
+                            <%=rows1[i].left_eye %>
+                          </td>
+                          <td>
+                            <%=rows1[i].right_eye %>
+                          </td>
+                          <td>
+                            <%=rows1[i].dep_time %>
+                          </td>
+                          <td>
+                            <%=rows1[i].arr_time %>
+                          </td>
+
+                        </tr>
+
+                        <% } %>
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                <!--  footer -->
+                <%-  include('partial/footer2'); %>
+                    <!-- end footer -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/fancyTable.min.js"></script>
+		   
+                   
+	<script>
+		$(".table").fancyTable({
+  sortColumn:0, // column number for initial sorting
+  sortOrder: 'descending', // 'desc', 'descending', 'asc', 'ascending', -1 (descending) and 1 (ascending)
+  sortable: true,
+  pagination: true, // default: false
+  searchable: false,
+  globalSearch: true,
+  globalSearchExcludeColumns: [2,5] // exclude column 2 & 5
+});
+	</script>
+ 
+	<script>
+		$(document).ready(function(){
+		$(".btnSelect").click(function(){
+			var cells = $(this).closest("tr").children("td");
+			var cell1 = cells.eq(2).html();
+			//var result = "";
+			//var vals = []
+			//var table = $("#tboper")
+			//var row1 = $('#tboper tr');
+			var row2 = document.getElementById('useroper');
+			var row_len = $(row2).text();
+			var cell2 = row2.getElementsByTagName('td').text();
+
+			//var stt = document.getElementsByTagName('td').childNodes[0].innerHTML;
+			//var tds = $(row2).find('td');
+			//var rere = tds.rows[1].cells[1].text();
+			//var re = $tds.eq(0).html().trim();
+			//alert(row2.rows[1].cells[1].innerHTML());
+			//for(var i = 0; i < row2.length; i++){
+			//	var cell2 = row2[i].getElementsByTagName('td');
+			//}
+			//alert(cell2[2].eq(2).html())
+			//for( var i = 0; i < rows2.length; i++){
+			//	vals = rows2[i].getElementsByTagName('td');
+			//}
+			//var elm1 = document.getElementsByClassName('row1');
+			//var elm2 = document.getElementsById('row2');
+			//var row2 = elm2.rows.eq(0);
+			//result = elm2.html();
+
+			//alert(td.innerHTML);
+			alert(row_len);
+			
+			//var td2 = row2.find("td");
+		
+			
+			/***
+			var val2 = [];
+			for (var i = 0; i <td2.length; i++){
+				val2[i] = $(td2).eq(2).html();
+			
+			}
+			for (var j = 0; j <td2.length; j++){
+				if(val2[j] == cell1)
+					result = j;
+				console.log(result);
+			}***/
+				
+	
+		})
+		})
+			
+	</script>
+    
+    </body>
+
+</html>
+

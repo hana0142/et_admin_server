@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <%- include('partial/header'); %>
+<style>
+body {display: flex; justify-content: center; padding: 3em 0} 
+input {padding: 1em 1.5em; font-size:1.2em}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    appearance: none;
+}
+
+</style>
+</head>
+  <!-- body -->
+<body class="main-layout">
+    <!-- loader  -->
+    <%- include('partial/loader'); %>
+    <!-- end loader -->
+    <!-- header -->
+    <div class="header">
+        <div class="top_header">
+            <div class="container-width">
+                <div class="row d_flex">
+                    <div class=" col-md-3 col-sm-4">
+                        <div class="logo">
+                            <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="header_midil">
+            <div class="container-width">
+                <div class="row d_flex">
+                    <div class="col-lg-9 col-md-12 col-sm-12">
+                        <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                            <div class="collapse navbar-collapse" id="navbarsExample04">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="wedo.html">what we do </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="blog.html">Blog </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="contact.html">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                   </div>
+                    <div class="col-md-3  d_none">
+                        <ul class="email text_align_right">
+                            <li><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i>Log In</a></li>
+                            <li><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i>Sign Up</a></li>
+                            <li><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end header inner -->
+    <!-- end header -->
+    <!-- top -->
+<div class="mainForm">
+                <h1>Register</h1>
+                <form action="/register" method="POST">
+                    <p>UserID: 4-16 characters, a-Z, 0-9, underscores, and dashes</p>
+                    <p>Pasword: 8-128 characters, REQUIRES 1 lowercase, uppercase, and digit</p>
+
+                    <label for="userid">Username: </label>
+                    <input type="text" id="userid" name="userid" autofocus>
+                    <br />
+
+                    <label for="password">Password: </label>
+                    <input type="password" id="password" name="password">
+                    <br />
+
+                    <label for="passConf">Confirm Password: </label>
+                    <input type="password" id="passConf" name="passConf">
+                    <br />
+
+                    <label for="username"> Username: </label>
+                    <input type="text" id="username" name="username">
+                    <br />
+
+                    <label for="email"> Email: </label>
+                    <input type="text" id="email" name="email">
+                    <br />
+
+                    <label for="age">Age : </label>
+                    <input type="text" id="age" name="age">
+                    <br />
+
+                    <label for="birthDate"> BirthDate: </label>
+                    <input type="date" id="birthdate" name="birthdate">
+                    <br />
+
+                    <label for="gender">Gender : </label>
+                    <input type="text" id="gender" name="gender">
+                    <br /><br />
+
+                    <input class="submitButton" type="submit" value="REGISTER">
+                </form>
+                <p>Or <a href="/login">login</a> if you already have an account.</p>
+            </div>
+    
+    <!--  footer -->
+    <%- include('partial/footer'); %>
+</body>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+	<script>
+var picker = new Pikaday({
+  field: document.getElementById('datepicker'),
+  format: 'yyyy-MM-dd',
+  toString(date, format) {
+    let day = ("0" + date.getDate()).slice(-2);
+    let month = ("0" + (date.getMonth() + 1)).slice(-2);
+    let year = date.getFullYear();
+    return `${year}-${month}-${day}`;
+  }
+});
+</script>
+
+
+</html>

@@ -1,0 +1,69 @@
+  <section id = "main-content">
+	   <section class="wrapper site-min-height">
+		<h3> Operation List</h3>
+		<h4>
+			<div>
+			<table class="oper_table" id="operdata tr">
+				<thead>
+				<tr>
+					<th>index</th>
+					<th>User Name</th>
+					<th>Operation NO</th>
+					<th>Operation Data</th>
+				</tr>
+				</thead>
+				<tbody>
+					<% for (j=0; j<data.length; j++){ %>
+					<tr class="test-td">
+					<td><%=data[j].index %></td>
+					<td><%=data[j].userid %></td>
+					<td><%=data[j].operno %></td>
+					<td><%=data[j].operdate %></td>
+					<% } %>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+
+	   </section>
+    </section>
+
+  <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="jquery.simplePagination.js"></script>
+	<script>
+		$(".test-td").click(function(){
+			console.log($(this).text());
+		})
+	</script>
+
+<script>
+                $(function() {
+                        $("#resultdata").simplePagination({
+                                previousButtonClass: "btn btn-danger",
+                                nextButtonClass: "btn btn-danger"
+                        });
+
+
+                });
+        </script>
+
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>

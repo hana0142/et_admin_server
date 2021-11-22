@@ -1,0 +1,236 @@
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>NTechnology</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<title><%= title %></title>
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+        <style>
+            html { margin: 0; padding: 0; font-family: 'Roboto', sans-serif; }
+            body { text-align: center; margin: 0; padding: 0; }
+            .main { width: 80%; margin: 0 auto; margin-top: 50px; }
+            a { color: blue; text-decoration: underline; }
+            nav { margin: 0 auto; padding: 15px 25px; background: steelblue; }
+            .links { list-style-type: none; margin: 0; padding: 0; }
+            .links li { display: inline-block; background: lightgrey; border: 1px solid lightgrey; border-radius: 5px; }
+            .links li a { display: block; padding: 8px 15px; background: lightgrey}
+            .message { margin: 0 auto; margin-top: 25px; margin-bottom: 35px; padding: 20px 10px; background: dodgerblue; text-align: center; color: lightgrey; font-size: 20px; max-width: 400px; border: 2px solid grey; border-radius: 8px; }
+            form input { display: inline-block; border-radius: 8px; border: none; outline: none; padding: 8px; }
+            form input:focus { box-shadow: 0 0 5px steelblue; }
+            form label { display: inline-block; }
+            .mainForm { margin: 0 auto; max-width: 400px; background-color: lightgrey; padding: 15px 10px; border-radius: 10px; }
+            .submitButton { color: white; background: steelblue; border: none; border-radius: 6px; padding: 8px 10px; }
+            .submitButton:hover { background-color: #138496; cursor: pointer; }
+            .submitButton:focus { outline: none; border: none; }
+            input { display: block; padding: 4px 2px; margin: 0 auto; margin-bottom: 8px; }
+            .profile { max-width: 700px; margin: 0 auto; }
+            .userInfo { margin: 75px 0px; text-align: left; }
+            .userTitle { font-size: 1.3rem; }
+            .userName { font-size: 20px; }
+            .collapsible { max-width: 700px; background-color: #777; color: white; cursor: pointer; padding: 18px; width: 100%; border: none; text-align: left; outline: none; font-size: 22px; }
+            .collapsible:hover, .active { background-color: #555; }
+            .collapsible h4 { margin: 0; margin-bottom: 0px; }
+            .collContent { max-width: 700px; margin: 0 auto; padding: 20px 20px; display: none; overflow: hidden; background-color: lightgrey; }
+            .collContent form { margin: 10px 0px; }
+        </style>
+   
+</head>
+   <!-- body -->
+   <body class="main-layout inner_page about_page">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <div class="header">
+         <div class="top_header">
+            <div class="container-width">
+               <div class="row d_flex">
+                  <div class=" col-md-3 col-sm-4">
+                     <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header_midil">
+            <div class="container-width">
+               <div class="row d_flex">
+                  <div class="col-lg-9 col-md-12 col-sm-12">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item">
+                                 <a class="nav-link" href="index.html">Home</a>
+                              </li>
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="about.html">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="wedo.html">what we do </a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="blog.html">Blog </a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="portfolio.html">Portfolio</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="contact.html">Contact Us</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+                  <div class="col-md-3  d_none">
+                     <ul class="email text_align_right">
+                        <li><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i>Log In</a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i>Sign Up</a></li>
+                        <li><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end header inner -->
+
+            <div class="profile"> 
+                <h1>Profile</h1>
+
+                <div class="userInfo">
+                    <p><span class="userTitle">Username: </span><span class="userName"><%- user.username %></span></p>
+                </div>
+
+                <button type="button" class="collapsible"><h4>Update Password</h4></button>
+                <div class="collContent" style="display:none;">
+                    <form action="/updpass" method="POST">
+                        <p>Requirements: 8-128 characters, requires 1 lowercase, uppercase, and digit</p>
+                        <label for="password">Current Password: </label>
+                        <input type="password" id="password" name="password">
+                        <br />
+
+                        <label for="newpass">New Password : </label>
+                        <input type="password" id="newpass" name="newpass">
+                        <br />
+
+                        <label for="newpassconf">Confirm New Password: </label>
+                        <input type="password" id="newpassconf" name="newpassconf">
+                        <br /><br />
+
+                        <input class="submitButton" type="submit" value="UPDATE">
+                    </form>
+                </div>
+</div>
+
+
+
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-7">
+                     <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                           <div class="hedingh3 text_align_left">
+                              <a class="logo_footer">NTechnology</a>
+                              <p> Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable sourc</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Blog</h3>
+                              <p>Which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anythin</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-5">
+                     <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Work Link</h3>
+                              <ul class="menu_footer">
+                                 <li> <a href="index.html">Home</a></li>
+                                 <li> <a href="about.html">About Us</a></li>
+                                 <li> <a href="wedo.html"> what we do </a></li>
+                                 <li> <a href="blog.html"> Blog</a></li>
+                                 <li> <a href="portfolio.html"> Portfolio</a></li>
+                                 <li> <a href="contact.html"> Contact Us</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                           <div class="hedingh3 text_align_left">
+                              <h3>Follow Us</h3>
+                              <ul class="social_icon ">
+                                 <li><a href="Javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                 <li><a href="Javascript:void(0)"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                 <li><a href="Javascript:void(0)"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                 <li><a href="Javascript:void(0)"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2020 All Rights Reserved. Design by <a href="https://html.design/"> Free html Templates</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- end footer -->
+
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+
